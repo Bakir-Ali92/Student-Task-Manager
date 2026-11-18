@@ -9,6 +9,13 @@ class TaskManager:
         for i, task in enumerate(self.tasks):
             status = "[x]" if task.get('completed') else "[ ]"
             print(f"{i}. {status} {task['title']}")
+    
+    def complete_task(self, index):
+        if 0 <= index < len(self.tasks):
+            self.tasks[index]['completed'] = True
+            print("Task marked as completed!")
+        else:
+            print("Invalid task index.")
             
     def add_task(self, title):
         if not title.strip():
