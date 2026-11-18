@@ -16,3 +16,11 @@ class TaskManager:
             print("Task marked as completed!")
         else:
             print("Invalid task index.")
+            
+    def add_task(self, title):
+        if not title.strip():
+            print("Error: Task title cannot be empty!")
+            return False
+        self.tasks.append({"title": title, "completed": False})
+        print(f"Task '{title}' added.")
+        return True
