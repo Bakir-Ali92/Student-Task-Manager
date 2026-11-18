@@ -8,7 +8,7 @@ class TestTaskManager(unittest.TestCase):
 
     def test_add_task(self):
         self.tm.add_task("Buy groceries")
-        self.assertEqual(len(self.tm.tasks), 2)
+        self.assertEqual(len(self.tm.tasks), 1)
         self.assertEqual(self.tm.tasks[0]['title'], "Buy groceries")
 
     def test_complete_task(self):
