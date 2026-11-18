@@ -10,6 +10,12 @@ class TaskManager:
             status = "[x]" if task.get('completed') else "[ ]"
             print(f"{i}. {status} {task['title']}")
     
+    def delete_task(self, index):
+        if 0 <= index < len(self.tasks):
+            removed = self.tasks.pop(index)
+            print(f"Task '{removed['title']}' deleted!")
+        else:
+            print("Invalid task index.")
     def complete_task(self, index):
         if 0 <= index < len(self.tasks):
             self.tasks[index]['completed'] = True
