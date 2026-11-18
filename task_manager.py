@@ -12,7 +12,7 @@ class TaskManager:
             
     def add_task(self, title):
         if not title.strip():
-            print("Error: Task title cannot be empty.")
+            print("Error: Task title cannot be empty!")
             return False
         self.tasks.append({"title": title, "completed": False})
         print(f"Task '{title}' added.")
