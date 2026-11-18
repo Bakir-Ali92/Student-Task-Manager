@@ -13,6 +13,6 @@ class TaskManager:
     def delete_task(self, index):
         if 0 <= index < len(self.tasks):
             removed = self.tasks.pop(index)
-            print(f"Task '{removed['title']}' deleted.")
+            print(f"Task '{removed['title']}' deleted!")
         else:
             print("Invalid task index.")
